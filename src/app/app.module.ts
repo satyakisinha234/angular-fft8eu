@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { StudentdetailsComponentComponent } from './studentdetails-component/studentdetails-component.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule ],
-  declarations: [ AppComponent, HelloComponent, StudentdetailsComponentComponent ],
+  declarations: [ AppComponent, HelloComponent, StudentdetailsComponentComponent, ReportComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

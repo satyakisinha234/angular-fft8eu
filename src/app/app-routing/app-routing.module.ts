@@ -5,6 +5,7 @@ import {StudentdetailsComponentComponent} from '../studentdetails-component/stud
 
 const appRoutes: Routes = [
   { path: 'report', component: StudentdetailsComponentComponent },
+  { path: 'home', component: StudentdetailsComponentComponent },
   
 ];
 
