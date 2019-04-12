@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {DataserviceService} from '../shared/dataservice.service'
+import {Studentmodel} from '../studentdetails-component/studentmodel'
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportComponent implements OnInit {
 
-  constructor() { }
+  details : Studentmodel;
+  constructor(public dataService: DataserviceService) { 
+    
+  }
 
   ngOnInit() {
+    this.details=this.dataService.get()['details'];
   }
+
+ 
+  
+
 
 }

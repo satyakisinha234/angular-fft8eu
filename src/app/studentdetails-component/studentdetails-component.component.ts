@@ -15,19 +15,26 @@ export class StudentdetailsComponentComponent implements OnInit {
   roll_id: number;
   contact: number;
 
-  constructor() {dataService: DataserviceService }
+  constructor(public dataService: DataserviceService ) {
+      
+  }
 
   ngOnInit() {    
 
   }
+  
 
   SubmitformData(){
     this.formDetails = new Studentmodel();
     this.formDetails.name = this.name;
     this.formDetails.contact = this.contact;
     this.formDetails.roll_id = this.roll_id;
+    this.dataService.set('details',this.formDetails);
     //alert(this.formDetails.name);
   }
   
+  
+  
+
 
 }

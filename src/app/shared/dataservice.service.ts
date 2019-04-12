@@ -8,11 +8,11 @@ export class DataserviceService {
   constructor() { }
   private data = {};  
   
-  setOption(option, value) {      
+  set(option, value) {      
     this.data[option] = value;  
   }  
   
-  getOption() {  
+  get() {  
     return this.data;  
   }  
 
