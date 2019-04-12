@@ -28,6 +28,4 @@ export class StudentdetailsComponentComponent implements OnInit {
     alert(this.formDetails.name);
   }
 
-
-
 }
