@@ -9,7 +9,7 @@ import {Studentmodel} from './studentmodel'
 })
 export class StudentdetailsComponentComponent implements OnInit {
 
-  public formDetails: Studentmodel;
+  public formDetails: Studentmodel; 
   name: string;
   roll_id: number;
   contact: number;
