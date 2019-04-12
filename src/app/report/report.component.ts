@@ -8,7 +8,7 @@ import {Studentmodel} from '../studentdetails-component/studentmodel'
 })
 export class ReportComponent implements OnInit {
 
-  details : Studentmodel;
+  details : [];
   constructor(public dataService: DataserviceService) { 
     
   }
