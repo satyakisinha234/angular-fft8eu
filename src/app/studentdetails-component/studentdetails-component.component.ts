@@ -20,9 +20,12 @@ export class StudentdetailsComponentComponent implements OnInit {
 
   }
 
-  formData(){
+  SubmitformData(){
     this.formDetails = new Studentmodel();
-
+    this.formDetails.name = this.name;
+    this.formDetails.contact = this.contact;
+    this.formDetails.roll_id = this.roll_id;
+    alert(this.formDetails.name);
   }
 
 
