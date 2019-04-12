@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Studentmodel} from './Studentmodel'
+import {Studentmodel} from './studentmodel'
 
 
 @Component({
@@ -9,6 +9,7 @@ import {Studentmodel} from './Studentmodel'
 })
 export class StudentdetailsComponentComponent implements OnInit {
 
+  public formDetails: Studentmodel;
   name: string;
   roll_id: number;
   contact: number;
@@ -16,6 +17,11 @@ export class StudentdetailsComponentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {    
+
+  }
+
+  formData(){
+    this.formDetails = new Studentmodel();
 
   }
 
