@@ -28,5 +28,6 @@ export class StudentdetailsComponentComponent implements OnInit {
     this.formDetails.roll_id = this.roll_id;
     //alert(this.formDetails.name);
   }
+  
 
 }
