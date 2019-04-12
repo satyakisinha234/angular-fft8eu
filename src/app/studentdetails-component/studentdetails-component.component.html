@@ -12,5 +12,7 @@
     <label for="Contact">Contact</label>
     <input [(ngModel)]="contact" class="form-control" id="contact">
   </div>
-  <button type="submit" (click)="SubmitformData()" class="btn btn-default">Submit</button>
+  <button type="submit" data-toggle="modal" data-target="#myModal" (click)="SubmitformData()" class="btn btn-default">Submit</button>
   </div>
+  <app-modal [Formobject]="formDetails"></app-modal>
+

@@ -25,7 +25,7 @@ export class StudentdetailsComponentComponent implements OnInit {
     this.formDetails.name = this.name;
     this.formDetails.contact = this.contact;
     this.formDetails.roll_id = this.roll_id;
-    alert(this.formDetails.name);
+    //alert(this.formDetails.name);
   }
 
 }
