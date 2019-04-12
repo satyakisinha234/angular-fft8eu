@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Studentmodel} from './studentmodel'
+import {DataserviceService} from '../shared/dataservice.service'
 
 
 @Component({
@@ -14,7 +15,7 @@ export class StudentdetailsComponentComponent implements OnInit {
   roll_id: number;
   contact: number;
 
-  constructor() { }
+  constructor() {dataService: DataserviceService }
 
   ngOnInit() {    
 
