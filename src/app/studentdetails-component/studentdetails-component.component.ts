@@ -14,7 +14,7 @@ export class StudentdetailsComponentComponent implements OnInit {
   name: string;
   roll_id: number;
   contact: number;
-
+  address: string;
   constructor(public dataService: DataserviceService ) {
       
   }
@@ -30,6 +30,7 @@ export class StudentdetailsComponentComponent implements OnInit {
     this.formDetails.contact = this.contact;
     this.formDetails.roll_id = this.roll_id;
     this.dataService.set('details',this.formDetails);
+    
     //alert(this.formDetails.name);
   }
   

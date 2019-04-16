@@ -9,10 +9,11 @@ import { StudentdetailsComponentComponent } from './studentdetails-component/stu
 import { ReportComponent } from './report/report.component';
 import { HomeComponent } from './home/home.component';
 import { ModalComponent } from './modal/modal.component';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule ],
-  declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent ],
+  declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent, AddressComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DataserviceService], 
 })
