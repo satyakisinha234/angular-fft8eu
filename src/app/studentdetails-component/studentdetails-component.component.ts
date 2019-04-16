@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Studentmodel} from './studentmodel'
 import {DataserviceService} from '../shared/dataservice.service'
+import {ToastModule} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
+
 
 
 @Component({
@@ -29,6 +31,7 @@ export class StudentdetailsComponentComponent implements OnInit {
 
   addressClick(){
       this.visibiltyFlag=true;
+      
   }
   
 
@@ -48,9 +51,7 @@ export class StudentdetailsComponentComponent implements OnInit {
       this.buttonFlag=false;
       //alert(this.address);
   }
-  addSingle() {
-        this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
-    }
+  
   
   
   

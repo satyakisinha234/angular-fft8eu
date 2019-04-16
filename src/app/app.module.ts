@@ -12,9 +12,11 @@ import { ModalComponent } from './modal/modal.component';
 import { AddressComponent } from './address/address.component';
 import {ToastModule} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule],
   declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent, AddressComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DataserviceService,MessageService], 

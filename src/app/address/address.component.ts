@@ -1,4 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import {ToastModule} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-address',
@@ -11,7 +13,7 @@ export class AddressComponent implements OnInit {
   @Output() AddressData= new EventEmitter<string>(); 
   address1:string;
   address2:string;
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
 
@@ -21,6 +23,7 @@ export class AddressComponent implements OnInit {
     //alert(this.address1+this.address2);
     this.AddressData.emit(this.address1+ ' ' + this.address2);
     this.showDiv=false;
+    this.messageService.add({severity:'success', summary:'Info', detail:'Address Added Successfully'});
   }
 
 }
