@@ -10,11 +10,13 @@ import { ReportComponent } from './report/report.component';
 import { HomeComponent } from './home/home.component';
 import { ModalComponent } from './modal/modal.component';
 import { AddressComponent } from './address/address.component';
+import {ToastModule} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule ],
   declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent, AddressComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [DataserviceService], 
+  providers: [DataserviceService,MessageService], 
 })
 export class AppModule { }

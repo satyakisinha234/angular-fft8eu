@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Studentmodel} from './studentmodel'
 import {DataserviceService} from '../shared/dataservice.service'
+import {MessageService} from 'primeng/api';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class StudentdetailsComponentComponent implements OnInit {
   visibiltyFlag:boolean=false;
   parentAdressFlag:boolean=false;
   buttonFlag:boolean=true;
-  constructor(public dataService: DataserviceService ) {
+  constructor(public dataService: DataserviceService,private messageService: MessageService ) {
       
   }
 
@@ -47,6 +48,9 @@ export class StudentdetailsComponentComponent implements OnInit {
       this.buttonFlag=false;
       //alert(this.address);
   }
+  addSingle() {
+        this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
+    }
   
   
   
