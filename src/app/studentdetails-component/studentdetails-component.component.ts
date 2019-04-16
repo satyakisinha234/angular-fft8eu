@@ -17,6 +17,7 @@ export class StudentdetailsComponentComponent implements OnInit {
   address ?: string;
   visibiltyFlag:boolean=false;
   parentAdressFlag:boolean=false;
+  buttonFlag:boolean=true;
   constructor(public dataService: DataserviceService ) {
       
   }
@@ -43,6 +44,7 @@ export class StudentdetailsComponentComponent implements OnInit {
   receiveChildData($event){
       this.address= $event
       this.parentAdressFlag=true;
+      this.buttonFlag=false;
       //alert(this.address);
   }
   

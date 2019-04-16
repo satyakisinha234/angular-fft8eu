@@ -25,7 +25,7 @@
     </div>
      <div class="row">
     <div class="col-sm-12">
-    <button (click)="addressClick()" class="btn btn-info">Click to add</button>
+    <button (click)="addressClick()" *ngIf="buttonFlag" class="btn btn-info">Click to add</button>
     </div>
     <app-address [showDiv]="visibiltyFlag" (AddressData)="receiveChildData($event)" ></app-address>
     </div>
