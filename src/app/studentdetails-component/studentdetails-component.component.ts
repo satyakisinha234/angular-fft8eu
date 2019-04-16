@@ -40,6 +40,7 @@ export class StudentdetailsComponentComponent implements OnInit {
     this.formDetails.name = this.name;
     this.formDetails.contact = this.contact;
     this.formDetails.roll_id = this.roll_id;
+    this.formDetails.address = this.address;
     this.dataService.set('details',this.formDetails);
     
     //alert(this.formDetails.name);
