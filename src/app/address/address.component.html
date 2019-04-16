@@ -1,4 +1,4 @@
-<div class="container-fluid" id="getAddress" *ngIf="showDiv">
+<div class="container-fluid" id="getAddress" *ngIf="showDiv" >
 <div class="form-group">
     <label for="address1">Address Line 1</label>
     <input [(ngModel)]="address1" class="form-control" id="address1">
@@ -7,4 +7,5 @@
     <label for="address2">Address Line 2</label>
     <input [(ngModel)]="address2" class="form-control" id="address2">
   </div>
+  <button type="submit" (click)="sendData()" class="btn btn-warning">Submit</button>
   </div>

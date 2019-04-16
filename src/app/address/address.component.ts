@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-address',
@@ -7,13 +7,18 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class AddressComponent implements OnInit {
 
-  @Input() showDiv : boolean=false;
+  @Input() showDiv : boolean;
+  @Output() AddressData= new EventEmitter<string>(); 
   address1:string;
   address2:string;
   constructor() { }
 
   ngOnInit() {
 
+  }
+
+  sendData(){
+    this.AddressData.emit(this.address1+this.address2);
   }
 
 }

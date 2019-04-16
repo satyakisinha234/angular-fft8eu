@@ -15,12 +15,17 @@ export class StudentdetailsComponentComponent implements OnInit {
   roll_id: number;
   contact: number;
   address: string;
+  visibiltyFlag:boolean=false;
   constructor(public dataService: DataserviceService ) {
       
   }
 
   ngOnInit() {    
 
+  }
+
+  addressClick(){
+      this.visibiltyFlag=true;
   }
   
 
