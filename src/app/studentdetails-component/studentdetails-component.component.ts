@@ -3,6 +3,7 @@ import {Studentmodel} from './studentmodel'
 import {DataserviceService} from '../shared/dataservice.service'
 import {ToastModule} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 

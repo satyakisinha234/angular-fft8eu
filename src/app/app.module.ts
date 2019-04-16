@@ -14,10 +14,11 @@ import {ToastModule} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule,TooltipModule],
   declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent, AddressComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DataserviceService,MessageService], 
