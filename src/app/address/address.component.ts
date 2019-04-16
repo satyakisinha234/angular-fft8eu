@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-address',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddressComponent implements OnInit {
 
+  @Input() showDiv : boolean=false;
+  address1:string;
+  address2:string;
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
