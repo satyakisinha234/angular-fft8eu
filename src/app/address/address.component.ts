@@ -21,6 +21,9 @@ export class AddressComponent implements OnInit {
 
   sendData(){
     //alert(this.address1+this.address2);
+    if(this.address2==undefined){
+      this.address2='';
+    }
     this.AddressData.emit(this.address1+ ' ' + this.address2);
     this.showDiv=false;
     this.messageService.add({severity:'success', summary:'Info', detail:'Address Added Successfully'});
