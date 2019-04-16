@@ -18,11 +18,16 @@
     <label for="address">Address</label>
     </div>
     </div>
+    <div class="row" *ngIf="parentAdressFlag">
+      <div class="col-sm-12">
+        <p class="lead">{{ address }}</p> 
+      </div>
+    </div>
      <div class="row">
     <div class="col-sm-12">
     <button (click)="addressClick()" class="btn btn-info">Click to add</button>
     </div>
-    <app-address [showDiv]="visibiltyFlag"></app-address>
+    <app-address [showDiv]="visibiltyFlag" (AddressData)="receiveChildData($event)" ></app-address>
     </div>
   </div>
   

@@ -18,7 +18,9 @@ export class AddressComponent implements OnInit {
   }
 
   sendData(){
-    this.AddressData.emit(this.address1+this.address2);
+    //alert(this.address1+this.address2);
+    this.AddressData.emit(this.address1+ ' ' + this.address2);
+    this.showDiv=false;
   }
 
 }

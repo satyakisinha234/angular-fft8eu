@@ -14,8 +14,9 @@ export class StudentdetailsComponentComponent implements OnInit {
   name: string;
   roll_id: number;
   contact: number;
-  address: string;
+  address ?: string;
   visibiltyFlag:boolean=false;
+  parentAdressFlag:boolean=false;
   constructor(public dataService: DataserviceService ) {
       
   }
@@ -37,6 +38,12 @@ export class StudentdetailsComponentComponent implements OnInit {
     this.dataService.set('details',this.formDetails);
     
     //alert(this.formDetails.name);
+  }
+
+  receiveChildData($event){
+      this.address= $event
+      this.parentAdressFlag=true;
+      //alert(this.address);
   }
   
   
