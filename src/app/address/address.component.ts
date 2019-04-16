@@ -12,7 +12,7 @@ export class AddressComponent implements OnInit {
   @Input() showDiv : boolean;
   @Output() AddressData= new EventEmitter<string>(); 
   address1:string;
-  address2:string;
+  address2 ?:string;
   constructor(private messageService: MessageService) { }
 
   ngOnInit() {
