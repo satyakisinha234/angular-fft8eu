@@ -1,20 +1,20 @@
-
-  <div class="container-fluid">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Roll No</th>
-        <th>Contact</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{details.name}}</td>
-        <td>{{details.roll_id}}</td>
-        <td>{{details.contact}}</td>
-        <td>{{details.address}}</td>
-      </tr>      
-    <tbody>
-      </table>
-</div>
+<div class="container-fluid">
+<p-table [value]="studentDetails">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Roll no</th>
+            <th>Contact</th>
+            <th>Address</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-student>
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.roll_id}}</td>
+            <td>{{student.contact}}</td>
+            <td>{{student.address}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<div>

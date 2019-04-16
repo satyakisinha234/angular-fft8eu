@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
 export class DataserviceService {
 
   constructor() { }
-  private data = {};  
+  private data=[];  
   
   set(option, value) {      
-    this.data[option] = value;  
+    this.data.push(value);  
   }  
   
   get() {  
