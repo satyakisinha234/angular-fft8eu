@@ -16,10 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import { AdminComponent } from './admin/admin.component';
-
+import {CardModule} from 'primeng/card';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule,TooltipModule],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule,TooltipModule,CardModule],
   declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent, AddressComponent, AdminComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DataserviceService,MessageService], 
