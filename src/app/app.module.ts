@@ -17,9 +17,10 @@ import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import { AdminComponent } from './admin/admin.component';
 import {CardModule} from 'primeng/card';
+import {DialogModule} from 'primeng/dialog'
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule,TooltipModule,CardModule],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule,TooltipModule,CardModule,DialogModule],
   declarations: [ AppComponent,StudentdetailsComponentComponent, ReportComponent, HomeComponent, ModalComponent, AddressComponent, AdminComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DataserviceService,MessageService], 

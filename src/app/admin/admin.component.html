@@ -4,35 +4,9 @@
     Welcome To The Admin Section
     </p>
   </div> 
-  <div  class="p-grid">
-    <div class="p-col"> 
-    <p-card header="Add" [style]="{width: '250px'}" styleClass="ui-card-shadow">
-      <div>Add student details</div>
-    </p-card>
-    </div>
-    <div class="p-col"> 
-    <p-card header="Modify" [style]="{width: '250px'}" styleClass="ui-card-shadow">
-      <div>Modify student details</div>
-    </p-card>
-    </div>
-    <div class="p-col"> 
-    <p-card header="Delete" [style]="{width: '250px'}" styleClass="ui-card-shadow">
-      <div>Delete student details</div>
-    </p-card>
-    </div>
-    <div class="p-col"> 
-    <p-card header="Search" [style]="{width: '250px'}" styleClass="ui-card-shadow"> 
-      <div>Search</div>
-    </p-card>
-    </div>
-    <div class="p-col"> 
-    <p-card header="Coming Soon" [style]="{width: '250px'}" styleClass="ui-card-shadow" >
-      <div>Coming Soon</div>
-    </p-card>
-    </div>
-  </div>
-  </div>
-  <p-table [columns]="cols" [value]="studentDetails" selectionMode="single" [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+  
+  
+ <p-table [columns]="cols" [value]="studentDetails" selectionMode="single" [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" [rows]="15">
     <ng-template pTemplate="header" let-columns>
         <tr>
             <th *ngFor="let col of columns" [pSortableColumn]="col.field">
@@ -48,12 +22,54 @@
             </td>
         </tr>
     </ng-template>
-    <ng-template pTemplate="summary" let-rowData>
-        <div style="text-align:left">
-            <button type="button" pButton icon="fa fa-plus" (click)="showDialogToAdd()" label="Add"></button>
-        </div>
-    </ng-template>    
+    
+       
 </p-table>
+<p-dialog header="Student Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true"  [style]="{width: '300px'}">
+    <div class="ui-g ui-fluid" *ngIf="student">
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="name">Name</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="name" [(ngModel)]="student.name" />
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="roll">Roll No</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="roll" [(ngModel)]="student.roll_id" />
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="contact">Contact</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="contact" [(ngModel)]="student.contact" />
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="address">Address</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="address" [(ngModel)]="student.address" />
+            </div>
+        </div>
+    </div>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">          
+            <button type="button" class="btn btn-secondary " (click)="save()" >Save</button>
+            <button type="button" class="btn btn-warning " (click)="delete()" >Delete</button>
+        </div>
+    </p-footer>
+    </p-dialog>
+  
+</div>
+ 
 
 
   

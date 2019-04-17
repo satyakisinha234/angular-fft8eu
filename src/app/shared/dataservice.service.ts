@@ -9,8 +9,14 @@ export class DataserviceService {
   constructor() { }
   private data=[];  
   
-  set(option, value) {      
-    this.data.push(value);  
+  set(option, value) { 
+    if(option=="update")
+    { 
+      this.data =value; 
+    } 
+    else{
+      this.data.push(value); 
+    }
   }  
   
   get() {  
