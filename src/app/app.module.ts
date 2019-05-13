@@ -18,6 +18,8 @@ import {TooltipModule} from 'primeng/tooltip';
 import { AdminComponent } from './admin/admin.component';
 import {CardModule} from 'primeng/card';
 import {DialogModule} from 'primeng/dialog'
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,RouterModule,ToastModule,BrowserAnimationsModule,TableModule,TooltipModule,CardModule,DialogModule],
